@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+    <title>AYA WELLNESS</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="doctor.css">
+</head>
+<body>
+<div class="container">
+
+    <div class="page-header text-center">
+        <h1>How are you feeling today?</h1>
+        <img src="/medidove/img/original.png">
+    </div>
+
+    <div class="row">
+
+        <!-- LOCAL INFORMATION -->
+        <div class="col-sm-6">
+            
+            </div>
+
+        </div>
+        <div class="col-sm-6">
+          <h3>Mood Board</h3>
+          <ul class="messages">
+          <% for(var i=0; i<messages.length; i++) {%>
+            <li class="message">
+              <span><%= messages[i].movie %></span>
+              <span><%= messages[i].review %></span>
+              <!-- <span><%= messages[i].price * messages[i].tip %></span> -->
+              <!-- <span><i class="fa fa-thumbs-up" aria-hidden="true"></i></span> -->
+               <!-- <span><i class="fa fa-thumbs-down" aria-hidden="true"></i></span> -->
+               <span><i class="fa fa-trash-o" aria-hidden="true"></i></span> 
+               <input type="text" placeholder="Edit feelings" name="review">
+               <button class="reviewBtn">Submit</button>
+            </li>
+            
+  
+          <% } %>
+          </ul>
+
+          
+
+          <h2>MOOD BOARD</h2>
+        <% if (user.local.email) { %>
+          <form action="/messages" method="POST">
+            <input type="text" placeholder="Mood" name="movie">
+            <input type="text" placeholder="Thoughts or feelings?" name="review">
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+        <% } %>
+
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
