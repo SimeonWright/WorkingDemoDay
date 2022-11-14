@@ -89,6 +89,22 @@ app.post('/postyaemotions', (req, res) => {
 })
 
 
+// therapist directory ================================================================
+app.get('/therapistdirectory', isLoggedIn, function(req, res) {
+  db.collection('therapistdirectory').find().toArray((err, result) => {
+    // it is going into the DB to find this info in the function below
+    if (err) return console.log(err)
+
+    res.render('therapistdirectory.ejs', {
+      user: req.user,
+      title: String,
+      createdAt: new Date(),
+      description: String,
+      bpost: String,
+    })
+  })
+});
+
 
 
 // message board routes ===============================================================

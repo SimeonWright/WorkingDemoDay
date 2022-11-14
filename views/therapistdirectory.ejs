@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8" />
   <link rel="stylesheet" href="#" />
-  <title>New Post</title>
+  <title>Therapy Directory</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -41,7 +41,7 @@
                   </div>
                   <div class="col-xl-5 col-lg-6 col-md-4">
                       <div class="header-top-right-btn f-right">
-                          <a href="/therapistdirectory" class="btn">Find a Therapist</a>
+                          <a href="/therapist" class="btn">Find a Therapist</a>
                       </div>
                   </div>
               </div>
@@ -65,8 +65,9 @@
                               </div>
                               <ul class="header-lang-list">
                                   <li><a href="#">USA</a></li>
-                                  <li><a href="#">ESP</a></li>
-                               
+                                  <li><a href="#">UK</a></li>
+                                  <li><a href="#">CA</a></li>
+                                  <li><a href="#">AU</a></li>
                               </ul>
                           </div>
                           <div class="header-social-icons f-right d-none d-xl-block">
@@ -161,8 +162,9 @@
         <div class="row">
             <div class="col-lg-9 col-md-9">
                 <div class="page-title">
-                    <p class="small-text pb-15">If you want to fly, you have to give up the things that weigh you down. - Toni Morrison</p>
-                    <h1>Most Recent Battle Won</h1>
+                    <p class="small-text pb-15"></p>
+                    <h1>Therapist Directory</h1>
+                    <h2>"When we speak, we are afraid our words will not be heard nor welcomed. But when we are silent, we are still afraid, so it is better to speak."  - Audre Lorde</h2>
                 </div>
             </div>
             
@@ -172,40 +174,7 @@
 <!-- HERO AREA END -->
 
   <!-- MAIN BLOG POST -->
-  <div class="container">
-    
-    <a href="/postyaemotions" class="btn btn-outline-dark">Make New Post</a>
-
-    <!-- worked with Trek Mentor to further understand how this connects back to the DB-->
-    <!-- each article posted -->
-    <% article.forEach(postyaemotions => { %>
-    <!-- this connects to the db on mongo, make sure that the collection key value pairs match up to the js variables -->
-    <div class="card mt-4">
-
-      <!-- FIRST BLOG POST -->
-      <div class="card-body">
-        <h4 class="card-title"><%= postyaemotions.title %></h4>
-        <div class="card-subtitle text-muted mb-2">
-          <%= postyaemotions.createdAt %>
-        </div>
-        <div class="card-text mb-2"><%= postyaemotions.description %></div>
-
-
-        <form action="/blogposting/<%= postyaemotions._id %>" method="DELETE" class="d-inline">
-          <button type="submit" class="btn btn-outline-danger">Delete</button>
-        </form>
-
-        <a href="/edit/<%= postyaemotions._id %>" class="btn btn-outline-dark">Edit</a>
-
-
-        <a href="/emotionspage/<%= postyaemotions._id %>" class="btn btn-outline-dark">Read More</a>
-
-
-      </div>
-    </div>
-    <% }) %>
-
-  </div>
+  
 
   
   
