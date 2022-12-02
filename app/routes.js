@@ -1,3 +1,5 @@
+const { isObject } = require("lodash");
+
 module.exports = function(app, passport, db) {
 
 // normal routes ===============================================================
@@ -24,7 +26,7 @@ module.exports = function(app, passport, db) {
         res.redirect('/');
     });
 
-    // FIND DOCTOR==========
+    // FIND DOCTOR ==========
     app.get('/doctor', function(req, res) {
       db.collection('messages').find().toArray((err, result) => {
         if (err) return console.log(err)
@@ -35,6 +37,60 @@ module.exports = function(app, passport, db) {
       })
       // res.redirect('/doctor');
   });
+
+
+
+
+
+  //////blog to emtoions///
+  app.get('/emotions', isLoggedIn, function(req, res) {
+    //  think of it as issuing a database query
+    db.collection('postyaemotions').find().toArray((err, result) => {
+      if (err) return console.log(err)
+      console.log(result)
+      res.render('emotions.ejs', {
+        // these below are the collections within the db
+        user: req.email,
+        article: result,
+        // what information do you want to get from the DB to display on your browser?
+      })
+    })
+  });
+
+
+  // ///// post ya Emotion page///////
+  app.get('/postyaemotions', isLoggedIn, function(req, res) {
+    db.collection('postyaemotions').find().toArray((err, result) => {
+      // it is going into the DB to find this info in the function below
+      if (err) return console.log(err)
+
+      res.render('postyaemotions.ejs', {
+        user: req.user,
+        title: String,
+        createdAt: new Date(),
+        description: String,
+        bpost: String,
+      })
+    })
+  });
+///// loading the new emotions onto emotions pagae///
+app.post('/postyaemotions', (req, res) => {
+  db.collection('postyaemotions').save({
+    user: req.user,
+    title: req.body.title,
+    createdAt: new Date(),
+    description: req.body.description,
+    bpost: req.body.blogpost,
+  }, (err, result) => {
+    if (err) return console.log(err)
+    console.log('saved to database')
+    res.redirect('/emotions')
+  })
+})
+
+
+
+
 // message board routes ===============================================================
 
 app.post('/messages', (req, res) => {
@@ -113,6 +169,7 @@ app.post('/messages', (req, res) => {
             successRedirect : '/profile', // redirect to the secure profile section
             failureRedirect : '/signup', // redirect back to the signup page if there is an error
             failureFlash : true // allow flash messages
+            
         }));
 
 // =============================================================================

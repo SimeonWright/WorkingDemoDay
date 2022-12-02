@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Blog</title>
+</head>
+
+<body>
+
+  <nav class="site-navBar">
+    <ul class="ulofnavbar" id="green">
+      <li><a href="/index" class="btn btn-outline-dark">Home</a></li>
+      <li><a href="/emergency" class="btn btn-outline-dark">Emergency</a></li>
+      <li><a href="/mission" class="btn btn-outline-dark">Mission</a></li>
+      <li><a href="/blogposting" class="btn btn-outline-dark">Make a post</a></li>
+      <li><a href="/blog" class="btn btn-outline-dark">Blog</a></li>
+      <li><a href="/resources" class="btn btn-outline-dark">Resources</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1 class="mb-4">New Blog Post</h1>
+
+    <% if (user.local.email) { %>
+
+    <form action="/postyaemotions" method="POST">
+      <div>
+        <label for="username">User Email:</label>
+        <input type="text" value="<%= user.local.email %>" name="name">
+        <br>
+        <label for="title">Title</label>
+        <input type="text" name="title" id="title" class="form-control" required>
+      </div>
+
+      <p></p>
+
+      <div>
+        <label for="title"> Date </label>
+        <input type="text" name="date" id="title" class="form-control" required>
+      </div>
+
+      <p></p>
+
+      <div>
+        <label for="title"> Quick Caption or Hashtags</label>
+        <input type="text" name="description" id="title" class="form-control" required>
+      </div>
+
+      <div>
+        <label for="title"> How are you feeling brother? </label>
+        <textarea name="blogpost" id="blogpost" cols="30" rows="10" class="form-control"></textarea required></text>
+      </div>
+
+
+  <button type="submit" class="btn btn-outline-dark">Save  </button>
+    </form>
+    <br>
+    <a href="/#" class="btn btn-outline-dark">Cancel</a>
+  </div>
+
+  <% } %>
+
+
+  <!-- Footer -->
+  <footer id="footer">
+    <h2 id="email2">Contact Simeon Wright, Founder</h2>
+    <ul class="icons">
+      <li><a href="https://twitter.com/" class="icon brands twitter"><span class="label">Twitter</span></a></li>
+      <li><a href="http://www.#.com/" class="icon brands portfolio"><span class="label">Portfolio</span></a></li>
+      <li><a href="https://www.linkedin.com/in/" class="icon brands linkedin"><span class="label">Linked In</span></a></li>
+      <li><a href="https://github.com/" class="icon brands github"><span class="label">GitHub</span></a></li>
+      <li><a href="mailto:@gmail.com" class="icon brands email"><span class="label">Email</span></a></li>
+    </ul>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+
+
+
+</body>
+
+</html>
+
+<!-- web dev simplied on youtube via github -->

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<!-- web dev simplied on youtube via github -->
+
+<head>
+  <title>New Post</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="#" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+</head>
+
+<body class="blogPostBody">
+
+  <header>
+
+    <!-- <nav id="indexNav">
+      <ul>
+        <li><a href="/index" class="button btn btn-outline-dark">Home</a></li>
+        <li><a href="/emergency" class="button btn btn-outline-dark">Emergency</a></li>
+        <li><a href="/mission" class="button btn btn-outline-dark">Mission</a></li>
+        <li><a href="/signup" class="btn btn-outline-dark">Sign Up</a></li>
+        <li><a href="/profile" class="button btn btn-outline-dark">Profile</a></li>
+        <li><a href="/resources" class="button btn btn-outline-dark">Resources</a></li>
+      </ul>
+    </nav>
+
+  </header> -->
+
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+
+  <div class="container">
+    <h1 class="mb-4">Most Recent Battle Won</h1>
+    <a href="/postyaemotions" class="btn btn-outline-dark">Make New Post</a>
+
+    <!-- worked with Trek Mentor to further understand how this connects back to the DB-->
+    <!-- each article posted -->
+    <% article.forEach(postyaemotions => { %>
+    <!-- this connects to the db on mongo, make sure that the collection key value pairs match up to the js variables -->
+    <div class="card mt-4">
+
+      <!-- first blog post -->
+      <div class="card-body">
+        <h4 class="card-title"><%= postyaemotions.title %></h4>
+        <div class="card-subtitle text-muted mb-2">
+          <%= postyaemotions.createdAt %>
+        </div>
+        <div class="card-text mb-2"><%= postyaemotions.description %></div>
+
+
+        <form action="/blogposting/<%= postyaemotions._id %>" method="DELETE" class="d-inline">
+          <button type="submit" class="btn btn-outline-danger">Delete</button>
+        </form>
+
+        <a href="/edit/<%= postyaemotions._id %>" class="btn btn-outline-dark">Edit</a>
+
+
+        <a href="/emotionspage/<%= postyaemotions._id %>" class="btn btn-outline-dark">Read More</a>
+
+
+      </div>
+    </div>
+    <% }) %>
+
+  </div>
+
+  
+  
+
+  <!-- Footer -->
+  
+
+</body>
+
+</html>

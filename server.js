@@ -5,6 +5,9 @@
 var express  = require('express');
 var app      = express();
 var port     = process.env.PORT || 8080;
+const server = require('http').Server(app)
+// const io = require('socket.io')(server)
+// const { v4: uuidV4 } = require('uuid')
 const MongoClient = require('mongodb').MongoClient
 var mongoose = require('mongoose');
 var passport = require('passport');
