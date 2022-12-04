@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Read More</title>
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+
+<body>
+  <header>
+
+  </header>
+  <br>
+  <br>
+  <h1>Current Blog Post</h1>
+
+  <div class="newReadMorePost">
+
+    <!-- i want to be able to see that specific article here  -->
+
+
+    <% if (user.local.email) { %>
+    <!-- this connects to the db on mongo, make sure that the collection key value pairs match up to the js variables -->
+    <div class="card mt-4">
+
+      <!-- first blog post -->
+      <div class="card-body">
+        <h4 class="card-title"><%= joker[0].title %></h4>
+        <div class="card-subtitle text-muted mb-2">
+          <%= joker[0].createdAt %>
+        </div>
+        <div class="card-text mb-2"><%= joker[0].description %></div>
+
+        <div class="card-text mb-2"><%= joker[0].bpost %></div>
+
+
+
+     
+      </div>
+      <% } %>
+
+    </div>
+
+
+   
+
+
+</body>
+
+</html>

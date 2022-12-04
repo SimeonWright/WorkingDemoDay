@@ -87,6 +87,36 @@ app.post('/postyaemotions', (req, res) => {
     res.redirect('/emotions')
   })
 })
+/////// Read More Button//////
+app.post('/viewemotion', (req, res) => {
+  db.collection('postyaemotions').save({
+    user: req.user,
+    title: req.body.title,
+    createdAt: new Date(),
+    description: req.body.description,
+    bpost: req.body.blogpost,
+  }, (err, result) => {
+    if (err) return console.log(err)
+    console.log('saved to database')
+    res.redirect('/viewemotion')
+  })
+})
+
+app.get('/viewemotion/:joker', isLoggedIn, function(req, res) {
+  // let post = ObjectId(req.params.joker)
+  //  think of it as issuing a database query
+  db.collection('postyaemotions').find({
+    // _id: post
+  }).toArray((err, result) => {
+    if (err) return console.log(err)
+    console.log(result, 'what can i fix')
+    res.render('viewemotion.ejs', {
+      joker: result,
+      user: req.user
+      // what information do you want to get from the DB to display on your browser?
+    })
+  })
+});
 
 
 
