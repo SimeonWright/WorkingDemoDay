@@ -1,4 +1,6 @@
 const { isObject } = require("lodash");
+// ObjectID is for the 'read more' button on post ya emotions 
+var ObjectId = require('mongodb').ObjectID;
 
 module.exports = function(app, passport, db) {
 
@@ -87,6 +89,7 @@ app.post('/postyaemotions', (req, res) => {
     res.redirect('/emotions')
   })
 })
+
 /////// Read More Button//////
 app.post('/viewemotion', (req, res) => {
   db.collection('postyaemotions').save({
@@ -103,10 +106,10 @@ app.post('/viewemotion', (req, res) => {
 })
 
 app.get('/viewemotion/:joker', isLoggedIn, function(req, res) {
-  // let post = ObjectId(req.params.joker)
+  let post = ObjectId(req.params.joker)
   //  think of it as issuing a database query
   db.collection('postyaemotions').find({
-    // _id: post
+     _id: post
   }).toArray((err, result) => {
     if (err) return console.log(err)
     console.log(result, 'what can i fix')
