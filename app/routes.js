@@ -121,6 +121,60 @@ app.get('/viewemotion/:joker', isLoggedIn, function(req, res) {
   })
 });
 
+//// edit page //// 
+app.get('/edit/:articleId', isLoggedIn, function(req, res) {
+  let articleId = ObjectId(req.params.articleId)
+  //think of it as issuing a database query
+  db.collection('postyaemotions').findOne({
+    _id: articleId
+  }, (err, result) => {
+    if (err) return console.log(err)
+    console.log(result, 'what can i fix')
+    res.render('edit.ejs', {
+      article: result,
+      user: req.user
+      //what information do you want to get from the DB to display on your browser?
+    })
+  })
+});
+
+/// save and post edit ////
+
+app.post('/updateArticle', isLoggedIn, function(req, res) {
+  let articleId = ObjectId(req.body.articleid)
+  //think of it as issuing a database query
+  db.collection('postyaemotions').findOneAndUpdate({
+    _id: articleId
+  }, {
+
+    $set: {
+      title: req.body.title,
+      description: req.body.description,
+      bpost: req.body.bpost
+    }
+  }, {
+    upsert: false
+  }, (err, result) => {
+    if (err) return console.log(err)
+    console.log(result, 'article updated!')
+    res.redirect('/emotions')
+    //what information do you want to get from the DB to display on your browser?
+  })
+});
+
+///// delete button ////
+
+app.get('/emotions/:id', (req, res) => {
+  db.collection('postyaemotions').findOneAndDelete({
+    _id: ObjectId(req.params.id),
+  }, (err, result) => {
+    console.log(result)
+    if (err) return res.send(500, err)
+    res.redirect('/emotions')
+  })
+})
+
+
 
 // therapist directory ================================================================
 app.get('/therapistdirectory', isLoggedIn, function(req, res) {
