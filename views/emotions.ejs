@@ -165,41 +165,12 @@
                     <h1>Most Recent Battle Won</h1>
                 </div>
             </div>
-            
         </div>
     </div>
 </section>
 <!-- HERO AREA END -->
 
-<div class="col-lg-6 col-md-6">
-  <article class="postbox post format-image mb-40">
-      <div class="postbox__thumb">
-          <a href="#">
-              <img src="img/blog/b9.jpg" alt="blog image">
-          </a>
-      </div>
-      <div class="postbox__text p-30">
-          <div class="post-meta mb-15">
-              <span><a href="#"><i class="far fa-user"></i> Diboli </a></span>
-              <span><a href="#"><i class="far fa-comments"></i> 23 Comments</a></span>
-          </div>
-          <h3 class="blog-title blog-title-sm">
-              <a href="#">Lorem ipsum dolor sit amet, consectetur adipisic elit, sed do eiusmod tempor
-                  incididunt
-                  .</a>
-          </h3>
-          <div class="post-text">
-              <p>There’s a good chance Everyday Health is the most appropriately named blog on this list because it focuses on the health
-              topics that consistently affect a wide range of people. They also get kudos.</p>
-          </div>
-          <div class="read-more">
-              <a href="#" class="read-more">read more <i class="fas fa-long-arrow-alt-right"></i></a>
-          </div>
-      </div>
-  </article>
-</div>
-
-  <!-- MAIN BLOG POST -->
+<!-- MAIN BLOG POST -->
   <div class="container">
     
     <a href="/postyaemotions" class="btn btn-outline-dark">Make New Post</a>
@@ -208,11 +179,23 @@
     <!-- each article posted -->
     <% article.forEach(postyaemotions => { %>
     <!-- this connects to the db on mongo, make sure that the collection key value pairs match up to the js variables -->
+    
     <div class="card mt-4">
 
       <!-- FIRST BLOG POST -->
-      <div class="card-body">
-        <h4 class="card-title"><%= postyaemotions.title %></h4>
+      <div class="col-lg-6 col-md-6">
+        <div class="postbox__thumb">
+          <a href="#">
+              <img src="img/img1.jpg" alt="blog image">
+          </a>
+      </div>
+      
+
+    <a href="/viewemotion/<%= postyaemotions._id %>">  <h4  class="blog-title blog-title-sm"><%= postyaemotions.title %> </h4> </a>
+
+   
+          
+
         <div class="card-subtitle text-muted mb-2">
           <%= postyaemotions.createdAt %>
         </div>
@@ -231,6 +214,9 @@
 
       </div>
     </div>
+
+
+    
     <% }) %>
 
   </div>
