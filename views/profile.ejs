@@ -26,16 +26,12 @@
   <div class="container">
 
     <div class="page-header text-center">
-      <a href="/doctor" class="btn btn-default btn-sm">Click here to see api function (mood tracker)</a>
+      <a href="/doctor" class="btn btn-default btn-sm">Leave a word of inspirtation</a>
     </div>
-    <div class="page-header text-center">
-      <a href="/emotions" class="btn btn-default btn-sm">Let's chat, Emotions</a>
-    </div>
+   
 
 
-    <div>
-      <p> Is this a therapist? <%= user.isTherapist%> </p>
-    </div>
+
 
     <div class="row">
 
@@ -91,17 +87,12 @@
           <div class="header-menu-area">
             <div class="container">
               <div class="row">
-                <div class="col-xl-3 col-lg-3 col-md-5 d-flex align-items-center">
-                  <div class="logo logo-circle pos-rel">
-                    <a href="index.html"><img src="img/logo/logo.png" alt=""></a>
-                  </div>
-                </div>
                 <div class="col-xl-9 col-lg-9 col-md-9">
                   <div class="header-right f-right">
                     <div class="header-lang f-right pos-rel d-none d-lg-block">
                       <div class="lang-icon">
-                        <img src="img/icon/lang.png" alt="">
-                        <span>EN<i class="fas fa-angle-down"></i></span>
+                        <!-- <img src="img/icon/lang.png" alt=""> -->
+                        <!-- <span>EN<i class="fas fa-angle-down"></i></span> -->
                       </div>
                       <!-- <ul class="header-lang-list">
                                       <li><a href="#">USA</a></li>
@@ -111,13 +102,13 @@
                                   </ul> -->
                     </div>
                     <div class="header-social-icons f-right d-none d-xl-block">
-                      <ul>
+                      <!-- <ul>
                         <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                         <li><a href="#"><i class="fab fa-behance"></i></a></li>
                         <li><a href="#"><i class="fab fa-youtube"></i></a></li>
                         <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
                         <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
-                      </ul>
+                      </ul> -->
                     </div>
                   </div>
                   <div class="header__menu f-right">
@@ -135,11 +126,11 @@
 
             <main>
               <!-- hero-area start -->
+              <section id="mentorImageBackground">
               <section class="hero-area">
                 <div class="hero-slider">
                   <div class="slider-active">
-                    <div class="single-slider slider-height d-flex align-items-center"
-                      data-background="img/slider/slider-bg-1.jpg">
+                    <div class="single-slider slider-height d-flex align-items-center">
                       <div class="container">
                         <div class="row">
                           <div class="col-xl-6 col-lg-8 col-md-10">
@@ -152,8 +143,9 @@
                                   Proffesionals in the greater Philedelphia Area</p>
                               </div>
                               <div class="hero-slider-btn">
-                                <a data-animation="fadeInLeft" data-delay=".6s" href="appoinment.html"
-                                  class="btn btn-icon ml-0"><span>+</span>FREE 15min CONSULTATION</a>
+                                <a data-animation="fadeInLeft" data-delay=".6s" href="/emotions"
+                                  class="btn btn-icon ml-0"><span>+</span>Lets chat, Emotions</a>
+                                  
                                 <!-- ADD YOUTUBE VIDEO -->
                                 <a data-animation="fadeInRight" data-delay="1.0s"
                                   href="https://www.youtube.com/watch?v=b_qAcqo4H3w" class="play-btn popup-video"><i
@@ -165,10 +157,10 @@
                         </div>
                       </div>
                     </div>
-
                   </div>
                 </div>
               </section>
+            </section>
               <!-- hero-area end -->
               <!-- about-area start -->
               <section class="about-area pt-120 pb-90">
@@ -176,11 +168,11 @@
                   <div class="row">
                     <div class="col-xl-6 col-lg-5">
                       <div class="medical-icon-brand-2">
-                        <img src="img/about/medical-brand-icon-border.png" alt="">
+                        <!-- <img src="img/about/medical-brand-icon-border.png" alt=""> -->
                       </div>
                       <div class="about-left-side pos-rel mb-30">
                         <div class="about-front-img">
-                          <img src="img/about/about-img.jpg" alt="">
+                          <img src="img/sim.jpg" alt="">
                         </div>
                         <div class="about-shape">
                           <img src="img/about/about-shape.png" alt="">
@@ -307,115 +299,7 @@
               </section>
               <!-- services-area end -->
               <!-- team-area start -->
-              <section class="team-area pt-115 pb-55">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-xl-6 col-lg-7 col-md-10">
-                      <div class="section-title pos-rel mb-75">
-                        <div class="section-icon">
-                          <img class="section-back-icon back-icon-left" src="img/section/section-back-icon.png" alt="">
-                        </div>
-                        <div class="section-text pos-rel">
-                          <h5>directory</h5>
-                          <h1>LICESNED & PRE-PROFESIONALS</h1>
-                        </div>
-                        <div class="section-line pos-rel">
-                          <img src="img/shape/section-title-line.png" alt="">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-5">
-                      <div class="section-button text-right d-none d-lg-block pt-80">
-                        <a data-animation="fadeInLeft" data-delay=".6s" href="appoinment.html"
-                          class="btn btn-icon ml-0"><span>+</span>Make Appointment</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                      <div class="team-box text-center mb-60">
-                        <div class="team-thumb mb-45 pos-rel">
-                          <!-- <img src="img/team/member1.png" alt="">
-                          <a class="team-link" href="doctor-details.html">+</a> -->
-                        </div>
-                        <div class="team-content">
-                          <h3>Mahmoud Mohammad, Pre-Licensed Professional, MS</h3>
-                          <h6>(223) 400-7850
-                            Free 15 minute consultation
-                            </h6>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                      <div class="team-box text-center mb-60">
-                        <div class="team-thumb mb-45 pos-rel">
-                          <!-- <img src="img/team/member2.png" alt=""> -->
-                          <!-- <a class="team-link" href="doctor-details.html">+</a> -->
-                        </div>
-                        <div class="team-content">
-                          <h3>Kenn Bourne, BA, MSW, LSW</h3>
-                          <h6>(267) 356-4920
-                            Free 15 minute consultations 
-                            </h6>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                      <div class="team-box text-center mb-60">
-                        <div class="team-thumb mb-45 pos-rel">
-                          <!-- <img src="img/team/member3.png" alt=""> -->
-                          <!-- <a class="team-link" href="doctor-details.html">+</a> -->
-                        </div>
-                        <div class="team-content">
-                          <h3>Daniel Mack,  Pre-Licensed Professional</h3>
-                          <h6>(215) 717-8908
-                            Free 15 minute consultations
-                            </h6>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                      <div class="team-box text-center mb-60">
-                        <div class="team-thumb mb-45 pos-rel">
-                          <!-- <img src="img/team/member4.png" alt=""> -->
-                          <!-- <a class="team-link" href="doctor-details.html">+</a> -->
-                        </div>
-                        <div class="team-content">
-                          <h3>Dothan C Landon-Freeman
-                          </h3>
-                          <h6>(215) 883-9048</h6>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                      <div class="team-box text-center mb-60">
-                        <div class="team-thumb mb-45 pos-rel">
-                          <!-- <img src="img/team/member5.png" alt=""> -->
-                          <!-- <a class="team-link" href="doctor-details.html">+</a> -->
-                        </div>
-                        <div class="team-content">
-                          <h3>Davier Daniels, Pre-Licensed Professional</h3>
-                          <h6>(610) 890-7373
-                            Free 15 minutes consultations
-                            </h6>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                      <div class="team-box text-center mb-60">
-                        <div class="team-thumb mb-45 pos-rel">
-                          <!-- <img src="img/team/member6.png" alt="">
-                          <a class="team-link" href="doctor-details.html">+</a> -->
-                        </div>
-                        <div class="team-content">
-                          <h3>Jack Cottom, MA, LPC</h3>
-                          <h6>(215) 709-9843</h6>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
+              
               <!-- team-area end -->
               <!-- fact-area start -->
               <section class="fact-area fact-map primary-bg pos-rel pt-115 pb-60">

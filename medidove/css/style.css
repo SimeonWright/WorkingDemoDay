@@ -56,7 +56,9 @@ body {
     max-width: 100%;
     transition: all 0.3s ease-out 0s;
 }
-
+#homeBody{
+	background-image: url(img/mentor.jpeg);
+  }
 .f-left {
     float: left
 }
@@ -251,7 +253,7 @@ label {
 /* button style */
 .btn {
 	-moz-user-select: none;
-	background: #e12454;
+	background: #14a71b;
 	border: medium none;
 	border-radius: 0;
 	color: #fff;
@@ -273,7 +275,7 @@ label {
 }
 
 .btn:hover {
-	background: #8fb569;
+	background: #14a71b;
 	color: #fff;
 }
 
@@ -283,7 +285,7 @@ label {
 	padding-right: 50px;
 	padding-top: 24px;
 	padding-bottom: 22px;
-	background-color: rgb(225, 36, 84);
+	background-color: #14a71b;
 	box-shadow: 0px 8px 16px 0px rgba(225, 36, 84, 0.2);
 }
 .btn-icon-green {
@@ -793,6 +795,7 @@ input.main-search-input:-ms-input-placeholder {
 .slider-height {
 	min-height: 900px;
 	background-position: center top;
+	
 }
 .slider-height-2 {
 	min-height: 950px;
@@ -803,6 +806,12 @@ input.main-search-input:-ms-input-placeholder {
 .slider-right-2 {
 	padding-top: 180px;
 }
+#mentorImageBackground{
+	background-image: url("https://www.jakukonbit.com/wp-content/uploads/2021/10/menors-picture2172.jpg");
+	/* background-color: green; */
+	background-size: cover;
+}
+
 .hero-text-box {
 	padding: 75px;
 	background: #fff;

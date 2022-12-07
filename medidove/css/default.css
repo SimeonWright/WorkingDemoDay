@@ -141,7 +141,7 @@
 }
 
 .mt-180 {
-    margin-top: 180px;
+    margin-top: 0px;
 }
 
 .mt-185 {
@@ -157,7 +157,7 @@
 }
 
 .mt-200 {
-    margin-top: 200px;
+    margin-top: 0px;
 }
 
 /*-- Margin Bottom --*/
@@ -415,7 +415,7 @@
 }
 
 .pt-120 {
-    padding-top: 120px;
+    padding-top: 76px;
 }
 
 .pt-125 {
@@ -479,7 +479,7 @@
 }
 
 .pt-200 {
-    padding-top: 200px;
+    padding-top: 0px;
 }
 
 /*-- Padding Bottom --*/
@@ -624,7 +624,7 @@
 }
 
 .pb-180 {
-    padding-bottom: 180px;
+    padding-bottom: 0px;
 }
 
 .pb-185 {

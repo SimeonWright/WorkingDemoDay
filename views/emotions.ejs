@@ -52,31 +52,23 @@
           <div class="container">
               <div class="row">
                   <div class="col-xl-3 col-lg-3 col-md-5 d-flex align-items-center">
-                      <div class="logo logo-circle pos-rel">
+                      <!-- <div class="logo logo-circle pos-rel">
                           <a href="index.ejs"><img src="img/logo/logo.png" alt=""></a>
-                      </div>
+                      </div> -->
                   </div>
                   <div class="col-xl-9 col-lg-9 col-md-9">
                       <div class="header__menu f-right">
                           <nav id="mobile-menu">
                               <ul>
-                                  <li><a href="index.html">Home +</a>
+                                  <li><a href="/profile">Home </a>
                                       <ul class="submenu">
-                                          <li><a href="simeonwright.github.io/My-Portfolio/">Founder About Me</a></li>
+                                          <li><a href="https://simeonwright.github.io/My-Portfolio/">Founder About Me</a></li>
                                           <li><a href="namiphilly.org">Resources</a></li>
-                                          <li><a href="index-3.html">Home style 3</a></li>
-                                          <li><a href="index-4.html">Home style 4</a></li>
-                                          <li><a href="index-5.html">Home style 5</a></li>
+                                        
                                       </ul>
                                   </li>
                                   
-                                  <li><a href="/therapistdirectory">Therapist</a>
-                                      <ul class="submenu">
-                                          <li><a href="/therapistdirectory"></a>A</li>
-                                          <li><a href="/therapistdirectory"></a>B</li>
-                                          <li><a href="/therapistdirectory"></a>C</li>
-                                      </ul>
-                                  </li>
+                                  <li><a href="/therapistdirectory">Therapist</a></li>
                                   <li><a href="/doctor">Affirmations</a>
                                   </li> 
                                   <li><a href="/">Log Out</a>
@@ -93,7 +85,7 @@
   <!-- HEAD END -->
 
    <!-- TITLE SECTION-->
-   <section class="breadcrumb-bg pt-200 pb-180" data-background="img/page/page-bg.jpg">
+   <section class="breadcrumb-bg pt-200 pb-180" data-background="">
     <div class="container">
         <div class="row">
             <div class="col-lg-9 col-md-9">
@@ -109,14 +101,16 @@
 
 <!-- MAIN BLOG POST -->
  
-    <!-- worked with Trek Mentor to further understand how this connects back to the DB-->
-    <!-- each article posted -->
+    
 
+<section class="blog-area pt-120 pb-120">
+
+
+
+  
   <div class="container"> 
-      
-      
     <a href="/postyaemotions" class="btn btn-outline-dark">Make New Post</a>   
-
+      
     <% article.forEach(postyaemotions => { %>
     <!-- this connects to the db on mongo, make sure that the collection key value pairs match up to the js variables -->
     
@@ -126,11 +120,11 @@
       <div class="col-lg-6 col-md-6">
 
         <!-- IMAGE -->
-        <div class="postbox__thumb">
+        <!-- <div class="postbox__thumb">
           <a href="/viewemotion/<%= postyaemotions._id %>">
               <img src="img/img3.jpg" alt="image of black man joy">
           </a>
-      </div>
+      </div> -->
       <!-- END IMAGE -->
 
     <a href="/viewemotion/<%= postyaemotions._id %>">  <h4  class="blog-title blog-title-sm"><%= postyaemotions.title %> </h4> </a>
@@ -204,8 +198,8 @@
                                     <a href="news-details.html"><img src="img/blog/feeds-thumb-1.jpg" alt=""></a>
                                 </div>
                                 <div class="blog-feeds-text">
-                                    <h5><a href="news-details.html">Lorem ipsum dolor sit am et, consectetur.</a></h5>
-                                    <span class="feeds-date">14 July 2019</span>
+                                    <h5><a href="https://augustafreepress.com/news/black-and-male-why-chris-jones-may-not-have-sought-help-for-an-undiagnosed-mental-health-condition/">Black and male: Why Chris Jones may not have sought help for mental-health condition</a></h5>
+                                    <span class="feeds-date">16 November 2022</span>
                                 </div>
                             </div>
                             <div class="signle-blog-feeds mb-20">
@@ -213,8 +207,8 @@
                                     <a href="news-details.html"><img src="img/blog/feeds-thumb-2.jpg" alt=""></a>
                                 </div>
                                 <div class="blog-feeds-text">
-                                    <h5><a href="news-details.html">Lorem ipsum dolor sit am et, consectetur.</a></h5>
-                                    <span class="feeds-date">14 July 2019</span>
+                                    <h5><a href="https://www.ebony.com/black-men-weigh-in-on-their-favorite-forms-of-self-care/">BLACK MEN WEIGH IN ON THEIR FAVORITE FORMS OF SELF-CARE</a></h5>
+                                    <span class="feeds-date">11 November 2022</span>
                                 </div>
                             </div>
                             <div class="signle-blog-feeds  mb-20">
@@ -222,8 +216,8 @@
                                     <a href="news-details.html"><img src="img/blog/feeds-thumb-3.jpg" alt=""></a>
                                 </div>
                                 <div class="blog-feeds-text">
-                                    <h5><a href="news-details.html">Lorem ipsum dolor sit am et, consectetur.</a></h5>
-                                    <span class="feeds-date">14 July 2019</span>
+                                    <h5><a href="https://www.tmj4.com/news/local-news/its-okay-to-be-hurt-milwaukee-barbers-learn-how-to-become-mental-health-advocates-for-black-men">'It's okay to be hurt': Milwaukee barbers learn how to become mental health advocates for Black men</a></h5>
+                                    <span class="feeds-date">7 November 2022</span>
                                 </div>
                             </div>
                         </div>

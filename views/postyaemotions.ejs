@@ -2,59 +2,66 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="assets/css/main.css">
-
+  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Blog</title>
+  <title>MediDove - Medical and Health HTML5 Template </title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- <link rel="manifest" href="site.webmanifest"> -->
+  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+  <!-- Place favicon.png in the root directory -->
+
+  <!-- CSS here -->
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../css/owl.carousel.min.css">
+  <link rel="stylesheet" type="text/css" href="../css/animate.min.css">
+  <link rel="stylesheet" type="text/css" href="../css/nice-select.css">
+  <link rel="stylesheet" type="text/css" href="../css/magnific-popup.css">
+  <link rel="stylesheet" type="text/css" href="../css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="../css/meanmenu.css">
+  <link rel="stylesheet" type="text/css" href="../css/slick.css">
+  <link rel="stylesheet" type="text/css" href="../css/default.css">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" type="text/css" href="../css/responsive.css">
 </head>
 
 <body>
 
-  <nav class="site-navBar">
-    <ul class="ulofnavbar" id="green">
-      <li><a href="/index" class="btn btn-outline-dark">Home</a></li>
-      <li><a href="/emergency" class="btn btn-outline-dark">Emergency</a></li>
-      <li><a href="/mission" class="btn btn-outline-dark">Mission</a></li>
-      <li><a href="/blogposting" class="btn btn-outline-dark">Make a post</a></li>
-      <li><a href="/blog" class="btn btn-outline-dark">Blog</a></li>
-      <li><a href="/resources" class="btn btn-outline-dark">Resources</a></li>
-    </ul>
-  </nav>
+  
 
-  <div class="container">
+  <!-- <div class="container">
     <h1 class="mb-4">New Blog Post</h1>
 
     <% if (user.local.email) { %>
 
-    <form action="/postyaemotions" method="POST">
-      <div>
-        <label for="username">User Email:</label>
-        <input type="text" value="<%= user.local.email %>" name="name">
-        <br>
-        <label for="title">Title</label>
-        <input type="text" name="title" id="title" class="form-control" required>
-      </div>
+      <form action="/postyaemotions" method="POST">
+        <div>
+          <label for="username">User Email:</label>
+          <input type="text" value="<%= user.local.email %>" name="name">
+          <br>
+          <label for="title">Title</label>
+          <input type="text" name="title" id="title" class="form-control" required>
+        </div>
 
-      <p></p>
+        <p></p>
 
-      <div>
-        <label for="title"> Date </label>
-        <input type="text" name="date" id="title" class="form-control" required>
-      </div>
+        <div>
+          <label for="title"> Date </label>
+          <input type="text" name="date" id="title" class="form-control" required>
+        </div>
 
-      <p></p>
+        <p></p>
 
-      <div>
-        <label for="title"> Quick Caption or Hashtags</label>
-        <input type="text" name="description" id="title" class="form-control" required>
-      </div>
+        <div>
+          <label for="title"> Quick Caption or Hashtags</label>
+          <input type="text" name="description" id="title" class="form-control" required>
+        </div>
 
-      <div>
-        <label for="title"> How are you feeling brother? </label>
-        <textarea name="blogpost" id="blogpost" cols="30" rows="10" class="form-control"></textarea required></text>
+        <div>
+          <label for="title"> How are you feeling brother? </label>
+          <textarea name="blogpost" id="blogpost" cols="30" rows="10" class="form-control"></textarea required></text>
       </div>
 
 
@@ -64,20 +71,189 @@
     <a href="/#" class="btn btn-outline-dark">Cancel</a>
   </div>
 
-  <% } %>
+  <% } %> -->
+  <header>
+    <div class="top-bar d-none d-md-block">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+                <div class="col-xl-6 offset-xl-1 col-lg-6 offset-lg-0 col-md-7 offset-md-1">
+                    <div class="header-info">
+                        <span><i class="fas fa-phone"></i> Emergency Number (215) 686-4420</span>
+                        <span><i class="fas fa-envelope"></i> namiphilly.org</span>
+                    </div>
+                </div>
+                <div class="col-xl-5 col-lg-6 col-md-4">
+                    <div class="header-top-right-btn f-right">
+                        <a href="/therapistdirectory" class="btn">Find a Therapist</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- menu-area -->
+    <div class="header-menu-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-5 d-flex align-items-center">
+                    <!-- <div class="logo logo-circle pos-rel">
+                        <a href="index.ejs"><img src="img/logo/logo.png" alt=""></a>
+                    </div> -->
+                </div>
+                <div class="col-xl-9 col-lg-9 col-md-9">
+                    <div class="header__menu f-right">
+                        <nav id="mobile-menu">
+                            <ul>
+                                <li><a href="/profile">Home </a>
+                                    <ul class="submenu">
+                                        <li><a href="https://simeonwright.github.io/My-Portfolio/">Founder About
+                                                Me</a></li>
+                                        <li><a href="namiphilly.org">Resources</a></li>
 
+                                    </ul>
+                                </li>
+
+                                <li><a href="/therapistdirectory">Therapist</a></li>
+                                <li><a href="/doctor">Affirmations</a>
+                                </li>
+                                <li><a href="/">Log Out</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</header>
+
+  <div class="post-comments-form">
+
+    <div class="post-comments-title">
+      <h2>Post Comments</h2>
+    </div>
+    <% if (user.local.email) { %>
+      <form action="/postyaemotions" method="POST">
+        <form id="contacts-form" class="conatct-post-form" action="#">
+          <div class="row">
+
+            <div class="col-xl-12">
+              <div >
+                <input type="text" placeholder="name" name="name">
+              </div>
+            </div>
+            <div class="col-xl-12">
+              <div >
+                <input type="text" name="title" id="title" class="form-control" placeholder="Title" required>
+              </div>
+            </div>
+            <div class="col-xl-12">
+              <div >
+                <input type="text" name="date" id="title" class="form-control" placeholder="Date" required>
+              </div>
+            </div>
+            <div class="col-xl-12">
+              <div>
+                <textarea name="blogpost" placeholder="Type here"id="blogpost" cols="30" rows="10" class="form-control"></textarea required></text>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12">
+                                            <button class="btn theme-btn" type="submit">Post comment</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <% } %>
 
   <!-- Footer -->
-  <footer id="footer">
-    <h2 id="email2">Contact Simeon Wright, Founder</h2>
-    <ul class="icons">
-      <li><a href="https://twitter.com/" class="icon brands twitter"><span class="label">Twitter</span></a></li>
-      <li><a href="http://www.#.com/" class="icon brands portfolio"><span class="label">Portfolio</span></a></li>
-      <li><a href="https://www.linkedin.com/in/" class="icon brands linkedin"><span class="label">Linked In</span></a></li>
-      <li><a href="https://github.com/" class="icon brands github"><span class="label">GitHub</span></a></li>
-      <li><a href="mailto:@gmail.com" class="icon brands email"><span class="label">Email</span></a></li>
-    </ul>
-  </footer>
+  <footer>
+    <div class="footer-top primary-bg footer-map pos-rel pt-120 pb-80">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                    <div class="footer-contact-info footer-contact-info-3 mb-40">
+                        <div class="footer-logo mb-35">
+                            <a href="#"><img src="img/logo/footer-logo-3.png" alt=""></a>
+                        </div>
+                        <div class="footer-contact-content mb-25">
+                            <p>Aya Wellness Connection was created in 2022 to bridge the gap between Black men
+                                seeking mental health professionals and Black male mental health professionals in
+                                the greater Philadelphia area..</p>
+                        </div>
+                        <div class="footer-emailing">
+                            <ul>
+                                <li><i class="far fa-envelope"></i>Emergency Number (215) 686-4420</li>
+                                <li><i class="far fa-clone"></i>namiphilly.org</li>
+                                <li><i class="far fa-flag"></i>4641 Roosevelt Blvd Philadelphia, PA 19124</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                    <div class="footer-widget mb-40">
+
+
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                    <div class="footer-widget mb-40">
+                        <div class="footer-title">
+                            <h3>News Feeds</h3>
+                        </div>
+                        <div class="blog-feeds pr-15">
+                            <div class="signle-blog-feeds mb-20">
+                                <div class="blog-feeds-thumb">
+                                    <a href="news-details.html"><img src="img/blog/feeds-thumb-1.jpg" alt=""></a>
+                                </div>
+                                <div class="blog-feeds-text">
+                                    <h5><a
+                                            href="https://augustafreepress.com/news/black-and-male-why-chris-jones-may-not-have-sought-help-for-an-undiagnosed-mental-health-condition/">Black
+                                            and male: Why Chris Jones may not have sought help for mental-health
+                                            condition</a></h5>
+                                    <span class="feeds-date">16 November 2022</span>
+                                </div>
+                            </div>
+                            <div class="signle-blog-feeds mb-20">
+                                <div class="blog-feeds-thumb">
+                                    <a href="news-details.html"><img src="img/blog/feeds-thumb-2.jpg" alt=""></a>
+                                </div>
+                                <div class="blog-feeds-text">
+                                    <h5><a
+                                            href="https://www.ebony.com/black-men-weigh-in-on-their-favorite-forms-of-self-care/">BLACK
+                                            MEN WEIGH IN ON THEIR FAVORITE FORMS OF SELF-CARE</a></h5>
+                                    <span class="feeds-date">11 November 2022</span>
+                                </div>
+                            </div>
+                            <div class="signle-blog-feeds  mb-20">
+                                <div class="blog-feeds-thumb">
+                                    <a href="news-details.html"><img src="img/blog/feeds-thumb-3.jpg" alt=""></a>
+                                </div>
+                                <div class="blog-feeds-text">
+                                    <h5><a
+                                            href="https://www.tmj4.com/news/local-news/its-okay-to-be-hurt-milwaukee-barbers-learn-how-to-become-mental-health-advocates-for-black-men">'It's
+                                            okay to be hurt': Milwaukee barbers learn how to become mental health
+                                            advocates for Black men</a></h5>
+                                    <span class="feeds-date">7 November 2022</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom pt-25 pb-20">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="footer-copyright footer-copyright-3 text-center">
+                        <p>Copyright by@ Get Wright Development - 2022</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 
   <!-- Scripts -->
   <script src="assets/js/jquery.min.js"></script>

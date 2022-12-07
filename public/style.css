@@ -1,6 +1,7 @@
 body{
   padding-top:80px;
   word-wrap:break-word;
+  
 }
 img{
   height: 200px;
@@ -9,3 +10,4 @@ img{
 .hidden{
   visibility: hidden;
 }
+
